@@ -3,3 +3,13 @@
 *.log
 *.toc
 *.out
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.epub
+*.html
+*.idv
+*.lg
+*.tmp
+*.xref
