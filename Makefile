@@ -8,6 +8,8 @@ EPUB_CONV_OPTS := --no-default-epub-cover --remove-paragraph-spacing
 
 %.epub : %.html
 	sed -i 's/Text copyright/<h1><\/h1>Text copyright/' $^ #Force ebook-convert to page break
+	sed -i 's/class="tableofcontents">/class="tableofcontents"><br \/>/' $^ #Add a break before Preface
+	sed -i 's/chapterToc\" > <a/chapterToc\" >\&nbsp;\&nbsp\&nbsp<a/' $^ #Align number-less chapters in TOC
 	ebook-convert $^ $@ $(EPUB_CONV_OPTS)
 
 preamble := preamble_kindle.tex
