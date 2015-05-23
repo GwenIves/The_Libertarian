@@ -7,6 +7,7 @@ EPUB_CONV_OPTS := --no-default-epub-cover --remove-paragraph-spacing
 	htlatex $^
 
 %.epub : %.html
+	sed -i 's/Text copyright/<h1><\/h1>Text copyright/' $^ #Force ebook-convert to page break
 	ebook-convert $^ $@ $(EPUB_CONV_OPTS)
 
 preamble := preamble_kindle.tex
