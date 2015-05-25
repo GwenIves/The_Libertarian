@@ -1,4 +1,4 @@
-EPUB_CONV_OPTS := --no-default-epub-cover --remove-paragraph-spacing
+EPUB_CONV_OPTS := --no-default-epub-cover --remove-paragraph-spacing --no-chapters-in-toc
 
 %.pdf : %.tex
 	pdflatex $^
