@@ -5,6 +5,7 @@ EPUB_CONV_OPTS := --no-default-epub-cover --remove-paragraph-spacing
 
 %.html : %.tex
 	htlatex $^
+	sed -i 's/\&#x2026;\([^\.\?\!]\)/\&#x2026; \1/g' $@ #Fix missing ldots spacing
 
 %.epub : %.html
 	sed -i 's/Text copyright/<h1><\/h1>Text copyright/' $^ #Force ebook-convert to page break
