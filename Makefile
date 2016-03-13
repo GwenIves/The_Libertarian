@@ -28,5 +28,5 @@ kindle: the_libertarian.epub
 
 .PHONY: clean
 clean:
-	@rm -f *.pdf *.aux *.log *.toc *.out *.aux *.pdf *.log *.toc *.out *.4ct *.4tc *.css *.dvi *.epub *.html *.idv *.lg *.tmp *.xref 2>/dev/null
+	@rm -f *.aux *.pdf *.log *.toc *.out *.4ct *.4tc *.css *.dvi *.epub *.html *.idv *.lg *.tmp *.xref 2>/dev/null
 	@rm -fr converted-* 2>/dev/null
